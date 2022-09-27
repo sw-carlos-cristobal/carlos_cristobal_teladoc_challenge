@@ -47,6 +47,14 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     }
 }
 
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
+
 dependencies {
     // App dependencies
     implementation 'androidx.annotation:annotation:' + rootProject.androidxAnnotationVersion;
