@@ -27,7 +27,7 @@ jobs:
     - name: Run tests with Gradle
       run: ./gradlew test
     - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          script: ./gradlew test
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 29
+        script: ./gradlew test
