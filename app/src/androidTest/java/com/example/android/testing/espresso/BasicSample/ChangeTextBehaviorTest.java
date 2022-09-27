@@ -29,6 +29,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.typeText;
@@ -48,6 +49,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 public class ChangeTextBehaviorTest {
 
     public static final String STRING_TO_BE_TYPED = "Espresso";
+    public static final String STRING_TO_CHANGE_TO = "Text has been changed again";
 
     /**
      * Use {@link ActivityScenarioRule} to create and launch the activity under test, and close it
@@ -65,6 +67,30 @@ public class ChangeTextBehaviorTest {
 
         // Check that the text was changed.
         onView(withId(R.id.textToBeChanged)).check(matches(withText(STRING_TO_BE_TYPED)));
+    }
+
+    @Test
+    public void changeTextTwice_sameActivity() {
+
+        // Type text and then press the button.
+        onView(withId(R.id.editTextUserInput))
+                .perform(typeText(STRING_TO_BE_TYPED), closeSoftKeyboard());
+        onView(withId(R.id.changeTextBt)).perform(click());
+
+        // Check that the text was changed.
+        onView(withId(R.id.textToBeChanged)).check(matches(withText(STRING_TO_BE_TYPED)));
+
+        // Clear the old text input
+        onView(withId(R.id.editTextUserInput))
+                .perform(clearText());
+
+        // Type text and then press the button.
+        onView(withId(R.id.editTextUserInput))
+                .perform(typeText(STRING_TO_CHANGE_TO), closeSoftKeyboard());
+        onView(withId(R.id.changeTextBt)).perform(click());
+
+        // Check that the text was changed.
+        onView(withId(R.id.textToBeChanged)).check(matches(withText(STRING_TO_CHANGE_TO)));
     }
 
     @Test
