@@ -10,8 +10,8 @@ https://github.com/android/testing-samples/tree/main/ui/espresso/BasicSample
 1. Change text a second time for existing activity
 2. Change text a second time for a new activity
 
-# CI/CD Run
-https://github.com/sw-carlos-cristobal/carlos_cristobal_teladoc_challenge/actions/runs/3135115925
+# CI/CD
+[![Android CI](https://github.com/sw-carlos-cristobal/carlos_cristobal_teladoc_challenge/actions/workflows/android.yml/badge.svg)](https://github.com/sw-carlos-cristobal/carlos_cristobal_teladoc_challenge/actions/workflows/android.yml)
 
 
 ## Contact Info
