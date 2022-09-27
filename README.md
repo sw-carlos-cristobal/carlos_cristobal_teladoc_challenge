@@ -1,4 +1,6 @@
-# carlos_cristobal_teladoc_challenge
+# README
+
+This README documents the take-home exam for Carlos Cristobal.
 
 # Sample Link
 https://github.com/android/testing-samples/tree/main/ui/espresso/BasicSample
@@ -10,3 +12,11 @@ https://github.com/android/testing-samples/tree/main/ui/espresso/BasicSample
 
 # CI/CD Run
 https://github.com/sw-carlos-cristobal/carlos_cristobal_teladoc_challenge/actions/runs/3135115925
+
+
+## Contact Info
+
+    Carlos Cristobal
+    sw.carlos.cristobal@gmail.com
+    831-435-9435
+    
