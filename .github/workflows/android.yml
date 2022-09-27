@@ -27,7 +27,7 @@ jobs:
     - name: Run tests with Gradle
       run: ./gradlew test
     - name: Accept Licenses
-      run: sdkmanager.bat --licenses
+      run: yes | sudo ~/Library/Android/sdk/tools/bin/sdkmanager --licenses
     - name: Run emulator tests
       run: ./gradlew  nexusOneApi30DebugAndroidTest
     - name: run tests
